@@ -2,24 +2,24 @@ const PORT = 3000
 const express = require("express")
 const app = express()
 
-app("/", (req,res)=>{
-    res(console.log("Why hello there!"))
+app.get("/", (req,res)=>{
+     res.send("Why hello there!")
 })
 
-app.post("@", () => {
-    req.send("🥭 is 🔥")
+app.post("/@", (req, res) => {
+    res.send("🥭 is 🔥")
 })
 
-post.app(app, () => {
+app.post('/slash', (req, res) => {
     res.send("I wonder what's wrong with this route 🤔?")
 })
 
-app.get( (req,res) => {
+app.get('/happy', (req,res) => {
     res.send("Happy 🐶 loves yummy dog food!")
 })
 
-app("/fruitsmoothie",() => {
-    res.send()
+app.post("/fruitsmoothie",(req, res) => {
+   
     res.send("A 🥭, 🍍, 🍓 make a wonderful smoothie!")
 })
 
